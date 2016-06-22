@@ -1,29 +1,49 @@
 <html>
 <head>
-	<script src="jquery.3.0.0.js"></script>
+	<script src="jquery-3.0.0.js"></script>
 	<style>
-		.sbold{
+		.sbold
+		{
 			font-weight: bold;
 		}
-		.sitalic{
+		.sitalic
+		{
 			font-style: italic;
 		}
-		.sunderline{
+		.sunderline
+		{
 			text-decoration:underline;
 		}
-		.sbcolor{
+		.sbcolor
+		{
 			background-color:green;
 		}
 	</style>
 	<script>
+		$(document).ready(function()
+		{
+			$("#b1").click(function(){
+				$('p').toggleClass("sbold")
+			});
+			$("#b2").click(function(){
+				$('p').toggleClass("sitalic")
+			});
+			$("#b3").click(function(){
+				$('p').toggleClass("sunderline")
+			});
+			$("input").click(function(){
+				$(this).toggleClass("sbcolor")
+			});
+		
+		});
 	</script>
 </head>
 <body>
 <h1>Font Style</h1>
 <hr>
- <input type="button" value="B" style="font-weight:bold;" />
- <input type="button" value="I" style="font-style: italic;" /> 
- <input type="button" value="U" style="text-decoration:underline;" /> 
+ <input type="button" id="b1" value="B" style="font-weight:bold;" />
+ <input type="button" id="b2" value="I" style="font-style: italic;" /> 
+ <input type="button" id="b3" value="U" style="text-decoration:underline;" /> 
  <p>
  My name is vipul kumar. 
  </p>
